@@ -1,0 +1,32 @@
+<!--pages/posts/posts.wxml-->
+<view>
+  <swiper indicator-dots autoplay interval="3000" circular>
+    <swiper-item>
+      <image bindtap="onGoToDetail" data-post-id="3" src="/images/bestplayers.png"></image>
+    </swiper-item>
+    <swiper-item>
+      <image bindtap="onGoToDetail" data-post-id="0" src="/images/lpl.png"></image>
+    </swiper-item>
+    <swiper-item>
+      <image bindtap="onGoToDetail" data-post-id="4" src="/images/jumpfly.png"></image>
+    </swiper-item>
+  </swiper>
+  <block wx:for="{{postList}}" wx:key="postId">
+    <view class="post-container" bindtap="onGoToDetail" data-post-id="{{item.postId}}">
+      <view class="post-author-date">
+        <image class="post-author" src="{{item.avatar}}"></image>
+        <text class="post-date">{{item.date}}</text>
+      </view>
+      <text class="post-title">{{item.title}}</text>
+      <image class="post-image" src="{{item.imgSrc}}"></image>
+      <text class="post-content">{{item.content}}</text>
+      <view class="post-like">
+        <l-icon class="post-like-img" name="favor" size="28"></l-icon>
+        <text class="post-like-text">{{item.collection}}</text>
+        <l-icon class="post-like-img" name="eye" size="32"></l-icon>
+        <text class="post-like-text">{{item.reading}}</text>  
+      </view>
+    </view>
+  </block>
+
+</view>

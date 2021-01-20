@@ -1,0 +1,15 @@
+<!--pages/movies/movies.wxml-->
+    <l-search l-class="l-search" bind:linconfirm="onConfirm" bind:lincancel="onCancel"></l-search>
+    <view wx:if="{{!searchResult}}">
+        <movie-list data-path="in_theaters" bindtap="onGoToMoreMovies"  movies="{{inTheaters}}" f-class="movie-list" title="热门电影"/>
+        <movie-list data-path="coming_soon" bindtap="onGoToMoreMovies"  movies="{{comingSoon}}"  f-class="movie-list" title="即将上映"/>
+        <movie-list data-path="top250" bindtap="onGoToMoreMovies" movies="{{top250}}"  f-class="movie-list" title="豆瓣TOP250"/>
+    </view>
+    <view wx:else class="searchResult">
+        <block wx:for="{{searchData}}" wx:key="index">
+            <movie class="movie" movie="{{item}}"></movie>
+        </block>
+    </view>
+   
+
+

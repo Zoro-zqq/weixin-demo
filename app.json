@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/welcome/welcome",
+    "pages/posts/posts",
+    "pages/post_detail/post_detail",
+    "pages/movies/movies",
+    "pages/more-movies/more-movies",
+    "pages/movie-detail/movie-detail"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#c22a1e"
+  },
+  "tabBar": {
+    "selectedColor": "#333333",
+    "color": "#999999",
+    "list": [
+      {
+        "pagePath": "pages/posts/posts",
+        "text": "资讯",
+        "iconPath": "/images/tab/post.png",
+        "selectedIconPath": "/images/tab/post@highlight.png"
+      },
+      {
+        "pagePath": "pages/movies/movies",
+        "text": "电影",
+        "iconPath": "/images/tab/movie.png",
+        "selectedIconPath": "/images/tab/movie@highlight.png"
+      }
+    ]
+  },
+  "requiredBackgroundModes": [
+    "audio",
+    "location"
+  ],
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

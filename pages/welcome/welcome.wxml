@@ -1,0 +1,9 @@
+<!--pages/welcome/welcome.wxml-->
+<view class="container">
+  <!-- <image src="../../images/avatar/1.png" class="avatar"></image> -->
+  <l-avatar class="l-avatar" placement="bottom" open-data="{{['userAvatarUrl','userNickName']}}" size="180" />
+  <text class="motto">hello,流氓兔</text>
+  <view bindtap="onEnter" class="journey-container">
+    <text class="journey">开始小程序之旅</text>
+  </view>
+</view>
